@@ -45,6 +45,7 @@ const login = async (req, res) => {
 
 const updateUser = async (req, res) => {
   const { email, lastName, location, name } = req.body;
+  console.log(req.user);
   if (!email || !lastName || !location || !name) {
     throw new BadRequestError("Please fill all the fields");
   }
